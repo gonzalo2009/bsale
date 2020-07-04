@@ -8,7 +8,7 @@ window.onload = () => {
 
 function price(){
 
-    if (document.title == "Cart") {
+    if (document.title == "Cart" && document.querySelector("#total")) {
 
         total = 0
         document.querySelectorAll(".cart").forEach(cart => {
@@ -27,7 +27,7 @@ function price(){
 
 
 function change(){
-    if (document.title == "Cart") {
+    if (document.title == "Cart" && document.querySelector("#total")) {
 
         document.querySelectorAll(".cantidad1").forEach(q => {
             q.onchange = () => {
@@ -43,7 +43,7 @@ function change(){
 
 
 function data() {
-    if (document.title == "Cart") {
+    if (document.title == "Cart" && document.querySelector("#total")) {
         
         document.querySelector("#btn-comprar").onclick = () => {
             l=[]

@@ -42,7 +42,8 @@ def delete(request, id):
     return redirect(reverse('cart'))
 
 def buy(request):
-    
+    print(list(request.POST))
+    cart_list.clear()
     return redirect(reverse('cart'))
 
 
