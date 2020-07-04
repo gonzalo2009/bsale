@@ -1,0 +1,39 @@
+{% load static %}
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>{% block title %}{% endblock %}</title>
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+        <link rel="stylesheet" href="{% static 'productos/styles.css' %}" />
+        <!-- <link rel="icon" href="{% static 'expenses/icon.png' %}" type="image/gif" sizes="16x16"> -->
+        <script src="{% static 'productos/scripts.js' %}"></script>
+        {% block head %}{% endblock %}
+    </head>
+    <body>
+        <nav class="navbar navbar-expand-lg navbar-light">
+            <span class="navbar-brand">Bsale</span>
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav"
+                aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation"><span class="navbar-toggler-icon"></span>
+            </button>
+            <a class="nav-link" href="{% url 'index' %}">Tienda</a>
+            <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                <form class="form-inline my-2 my-lg-0">
+                    <input class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search">
+                    <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Search</button>
+                </form>
+            </div>
+            <a class="nav-link" href="{% url 'cart' %}">Carrito</a>
+
+        </nav>
+        <div class="container">
+            <div class="row">
+                <div class="col-xl-1 col-lg-1 col-md-1"></div>
+                <div class="col-xl-10 col-lg-10 col-md-10">
+                    {% block body %}{% endblock %}
+                </div>
+                <div class="col-xl-1 col-lg-1 col-md-1"></div>
+            </div>
+        </div>    
+    </body>
+</html>

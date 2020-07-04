@@ -1,0 +1,126 @@
+body{
+    background-color: #ECF0F1;
+}
+
+.img-div{
+    border-bottom: 1px solid #D7DBDD;
+    /* padding-bottom: 10px; */
+    
+}
+
+.picture{
+    width: 200px;
+    margin-top: 10px;
+    margin-bottom: 10px;
+}
+
+.navbar-light{
+     background-color: #FBFCFC;
+     margin-bottom: 40px;
+}
+
+.grid-container {
+  display: grid;
+  grid-template-columns: auto auto auto auto;
+  grid-gap: 50px 20px;
+  margin-bottom: 100px;
+}
+
+.grid-item {
+  background-color:white;
+  text-align: center;
+  height: 400px; 
+  width: 200px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.form-inline{
+    margin-left: auto;
+    margin-right: auto;
+}
+
+/* .form-control{
+    width: 300px;
+} */
+
+
+
+.name{
+    font-size: small;
+    margin: 4px;
+}
+
+.price{
+    margin-top: 40px;
+    margin-left: 0;
+    text-align: left;
+    width: 200px;
+}
+
+.price p{
+    width: 100px;
+    padding-left: 15px;
+}
+.price a{
+   margin-left: auto;
+   margin-right: auto;
+}
+
+.cart{
+    height: 140px;
+    margin-left: 10px;
+    margin-right: 10px;
+    padding-bottom: 10px;
+    background-color: white;
+    border-bottom: 1px solid #D7DBDD;
+}
+
+.cart img{
+    width: 100px;
+    margin-left: 20px;
+}
+
+.column-btn{
+    margin-left: 30%;
+    margin-top: 6%;
+}
+
+.empty_cart{
+    text-align: center;
+    margin-top: 40px;
+}
+
+.comprar{
+margin-top: 20px;
+margin-left: 70%;
+}
+
+.data{
+    padding-top: 20px;
+    width: 25%;
+}
+
+.data p{
+    margin: 3px;
+}
+
+.cart-name{
+    font-size: 17px;
+    font-weight: 600;
+    color: rgb(149, 149, 149);
+}
+
+.form-control{
+  width: 70px;
+}
+
+.cantidad{
+    padding-top: 22px;
+    margin-left: 10%;
+}
+
+.total{
+    margin-top: 10px;
+    margin-right: 50px;
+}

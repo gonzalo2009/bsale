@@ -1,0 +1,29 @@
+{% extends "productos/base.html" %}
+
+{% block title %}
+Home
+{% endblock %}
+
+{% block body %}
+    <div class="grid-container">
+    {% for producto in productos %}
+        <div class="grid-item">
+            <div class="img-div">
+                {% if producto.urlImg %}
+                    <img src="{{ producto.urlImg }}" alt="" class="picture">
+                {% endif %}
+                <div class="name">
+                    <p>{{ producto.name }}</p>
+                </div>
+            </div>
+            <div class="price row">
+                <p class="column">${{ producto.variant.finalPrice}}</p>
+                <a class="btn btn-primary" href="{% url 'add' producto.id%}">Add</a>
+            </div>
+        </div>
+     {% endfor %}   
+    </div>
+{% endblock %}
+
+
+
