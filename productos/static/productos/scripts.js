@@ -51,23 +51,15 @@ function data() {
                 quantity = cart.querySelector(".cantidad1").value
                 unitValue = cart.querySelector(".price").innerHTML.slice(1)
                 id= cart.querySelector(".idVarianteProducto").innerHTML.slice(1)
-                l.push(`{"quantity" : ${quantity}, "unitValue": ${unitValue},  "idVarianteProducto": ${id}}`)
+                l.push(`{"quantity":${quantity},"unitValue":${unitValue},"idVarianteProducto":${id}}`)
 
             });
             
+            
+            document.querySelector("#data").value = `{"cartDetails":[${l}]}`;
+            document.querySelector("#form-data").submit();
 
-            url=document.querySelector("#url").dataset.url
-
-
-            body = {"cartDetails": [l]}
-
-            fetch(url, {
-                method: "POST",
-                headers: {
-                    "X-CSRFToken": getCookie("csrftoken")
-                },
-                body: body
-            })
+        
 
         }
 
@@ -77,19 +69,5 @@ function data() {
 
 
 
-function getCookie(name) {
-    var cookieValue = null;
-    if (document.cookie && document.cookie !== '') {
-        var cookies = document.cookie.split(';');
-        for (var i = 0; i < cookies.length; i++) {
-            var cookie = cookies[i].trim();
-            // Does this cookie string begin with the name we want?
-            if (cookie.substring(0, name.length + 1) === (name + '=')) {
-                cookieValue = decodeURIComponent(cookie.substring(name.length + 1));
-                break;
-            }
-        }
-    }
-    return cookieValue;
-}
+
 

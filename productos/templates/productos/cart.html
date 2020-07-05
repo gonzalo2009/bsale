@@ -10,9 +10,10 @@ Cart
 {% block body %}
 {% if product_list %}
 {% for producto in product_list %}
-<p id="url"  data-url="{% url 'buy'%}" hidden>{{ producto.variant.id}}</p>
+
 <div class="row cart">
     <div class="column">
+        <p id="url"  data-url="{% url 'buy'%}" hidden></p>
         {% if producto.urlImg %}
         <img src="{{ producto.urlImg }}" alt="" class="picture">
         {% endif %}
@@ -47,8 +48,14 @@ Cart
     <div class="empty_cart">
         <h2>El carrito esta vacio</h2>
     </div>
+{% endif %} 
 
-{% endif %}    
+<form id="form-data" method='POST' action="{% url 'buy' %}" hidden>
+    {% csrf_token %}
+    <div class="form-group">
+        <input id="data"type="text" name="data">
+    </div>
+</form>
 {% endblock %}
 
 

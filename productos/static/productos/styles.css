@@ -14,10 +14,12 @@ body{
     margin-bottom: 10px;
 }
 
+
 .navbar-light{
      background-color: #FBFCFC;
      margin-bottom: 40px;
 }
+
 
 .grid-container {
   display: grid;
@@ -124,3 +126,4 @@ margin-left: 70%;
     margin-top: 10px;
     margin-right: 50px;
 }
+
