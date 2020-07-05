@@ -11,49 +11,26 @@
         {% block head %}{% endblock %}
     </head>
     <body>
-        <!-- <nav class="navbar navbar-expand-lg navbar-light">
-            <span class="navbar-brand">Bsale</span>
-            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav"
-                aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation"><span class="navbar-toggler-icon"></span>
-            </button>
-
-
-            <div class="collapse navbar-collapse" id="navbarSupportedContent">
-                <a class="nav-item nav-link" href="{% url 'index' %}">Tienda</a>
-                <form class="form-inline my-2 my-lg-0">
-                    <input class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search">
-                    <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Search</button>
-                </form>
-                <a class="nav-link" href="{% url 'cart' %}">Carrito</a>
-            </div>
-        </nav> -->
         <nav class="navbar navbar-expand-lg navbar-light bg-light">
             <span class="navbar-brand">Bsale</span>
-            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavAltMarkup"
-                aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav"
+                aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
                 <span class="navbar-toggler-icon"></span>
             </button>
-            <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
-                <div class="navbar-nav">
-                    <a class="nav-item nav-link" href="{% url 'index' %}">Tienda</a>
-                    <form class="form-inline my-2 my-lg-0">
-                        <input class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search">
-                        <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Search</button>
-                    </form>
-                    <a class="nav-item nav-link" href="{% url 'cart' %}">Carrito</a>
-                </div>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav">
+                    <li class="nav-item">
+                        <a class="nav-item nav-link" href="{% url 'index' %}">Tienda</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-item nav-link" href="{% url 'cart' %}">Carrito</a>
+                    </li>
+                </ul>
+                <!-- </div> -->
             </div>
         </nav>
         <div class="container">
-            <!-- <div class="row">
-                <div class="col-xl-1 col-lg-1 col-md-1"></div>
-                <div class="col-xl-10 col-lg-10 col-md-10"> -->
-                    {% block body %}{% endblock %}
-                <!-- </div>
-                <div class="col-xl-1 col-lg-1 col-md-1"></div>
-            </div> -->
-
-
+            {% block body %}{% endblock %}
         </div>    
     </body>
 </html>

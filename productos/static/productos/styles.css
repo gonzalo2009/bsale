@@ -42,12 +42,6 @@ body{
     margin-right: auto;
 }
 
-/* .form-control{
-    width: 300px;
-} */
-
-
-
 .name{
     font-size: small;
     margin: 4px;
@@ -85,7 +79,7 @@ body{
 
 .column-btn{
     margin-left: 30%;
-    margin-top: 6%;
+    margin-top: 50px;
 }
 
 .empty_cart{
@@ -135,6 +129,16 @@ margin-left: 70%;
   
 }
 
+.column-btn{
+    margin-left: 20%;
+}
+
+
+.cantidad{
+    padding-top: 22px;
+    margin-left: 10%;
+}
+
 }
 
 @media only screen and (max-width: 800px) {
@@ -145,12 +149,52 @@ margin-left: 70%;
   
 }
 
+.column-btn{
+    margin-left: 5%;
+   
+}
+
+.cantidad{
+    padding-top: 22px;
+    margin-left: 5px;
+}
+
+.cart img{
+    margin-left: 5px;
+}
+
+}
 @media only screen and (max-width: 500px) {
   
 .grid-container {
   
   grid-template-columns: auto;
   
+}
+
+.column-btn{
+    margin-left: 5px;
+   
+}
+
+.cantidad{
+    padding-top: 22px;
+    margin-left: 6px;
+}
+
+.cart img{
+    width: 40px;
+    margin-top: 40px;
+    margin-left: 0;
+}
+
+.cart-name{
+    font-size: 12px;
+    font-weight: 400;
+}
+
+.form-control{
+  width: 40px;
 }
 
 }
