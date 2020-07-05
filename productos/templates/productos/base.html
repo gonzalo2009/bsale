@@ -36,20 +36,24 @@
             <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
                 <div class="navbar-nav">
                     <a class="nav-item nav-link" href="{% url 'index' %}">Tienda</a>
-
-                    
+                    <form class="form-inline my-2 my-lg-0">
+                        <input class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search">
+                        <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Search</button>
+                    </form>
                     <a class="nav-item nav-link" href="{% url 'cart' %}">Carrito</a>
                 </div>
             </div>
         </nav>
         <div class="container">
-            <div class="row">
+            <!-- <div class="row">
                 <div class="col-xl-1 col-lg-1 col-md-1"></div>
-                <div class="col-xl-10 col-lg-10 col-md-10">
+                <div class="col-xl-10 col-lg-10 col-md-10"> -->
                     {% block body %}{% endblock %}
-                </div>
+                <!-- </div>
                 <div class="col-xl-1 col-lg-1 col-md-1"></div>
-            </div>
+            </div> -->
+
+
         </div>    
     </body>
 </html>

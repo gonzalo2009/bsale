@@ -14,13 +14,6 @@ body{
     margin-bottom: 10px;
 }
 
-
-.navbar-light{
-     background-color: #FBFCFC;
-     margin-bottom: 40px;
-}
-
-
 .grid-container {
   display: grid;
   grid-template-columns: auto auto auto auto;
@@ -36,6 +29,13 @@ body{
   margin-left: auto;
   margin-right: auto;
 }
+
+
+.navbar-light{
+     background-color: #FBFCFC;
+     margin-bottom: 40px;
+}
+
 
 .form-inline{
     margin-left: auto;
@@ -127,3 +127,30 @@ margin-left: 70%;
     margin-right: 50px;
 }
 
+@media only screen and (max-width: 1100px) {
+  
+.grid-container {
+  
+  grid-template-columns: auto auto auto;
+  
+}
+
+}
+
+@media only screen and (max-width: 800px) {
+  
+.grid-container {
+  
+  grid-template-columns: auto auto;
+  
+}
+
+@media only screen and (max-width: 500px) {
+  
+.grid-container {
+  
+  grid-template-columns: auto;
+  
+}
+
+}
