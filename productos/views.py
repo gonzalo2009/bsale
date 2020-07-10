@@ -8,11 +8,12 @@ import json
 headers={'access_token': '22636ca690d932cc523065f4b3dea68ed3184bdb'}
 url_producto='http://ec2-54-183-147-121.us-west-1.compute.amazonaws.com:8383/v2/markets/1/collection/2/market_info.json'
 url_market='http://ec2-54-183-147-121.us-west-1.compute.amazonaws.com:8585/v1/cart.json'
+response_producto = requests.get(url_producto, headers=headers).json()['data']
 
 cart_list=[]
 
 def index(request):
-    response_producto = requests.get(url_producto, headers=headers).json()['data']
+    
     context={'productos': response_producto}
     # print(context)
     return render(request, "productos/index.html", context)
