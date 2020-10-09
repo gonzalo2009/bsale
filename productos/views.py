@@ -13,9 +13,7 @@ response_producto = requests.get(url_producto, headers=headers).json()['data']
 cart_list=[]
 
 def index(request):
-    
     context={'productos': response_producto}
-    # print(context)
     return render(request, "productos/index.html", context)
     
        
@@ -24,20 +22,21 @@ def cart(request):
     if len(cart_list)!=0:
         product_list=[]
         for i in cart_list:
-            a = list(filter(lambda x:  i==x['id'], response_producto))[0]
+            a = list(filter(lambda x: i==str(x['id']), response_producto))[0]
             product_list.append(a)
         context={'product_list': product_list}
     return render(request, "productos/cart.html", context)
 
 
 
-def add(request, id):
-    cart_list.append(id)
+def add(request):
+    cart_list.append(request.GET['id'])
+    print(cart_list)
     return redirect(reverse('index'))
 
 
 def delete(request, id):
-    cart_list.remove(id)
+    cart_list.remove(str(id))
     return redirect(reverse('cart'))
 
 def buy(request):

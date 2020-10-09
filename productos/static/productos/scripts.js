@@ -1,8 +1,8 @@
 window.onload = () => {
-    
     price();
     change();
     data();
+    add();
 };
 
 
@@ -40,8 +40,6 @@ function change(){
 }
 
 
-
-
 function data() {
     if (document.title == "Cart" && document.querySelector("#total")) {
         
@@ -54,20 +52,25 @@ function data() {
                 l.push(`{"quantity":${quantity},"unitValue":${unitValue},"idVarianteProducto":${id}}`)
 
             });
-            
-            
             document.querySelector("#data").value = `{"cartDetails":[${l}]}`;
             document.querySelector("#form-data").submit();
-
-        
-
         }
-
     }
-
 }
 
 
 
-
+function add() {
+    
+    if (document.title == "Home") {
+        document.querySelectorAll(".btn-add").forEach(button => {
+        button.onclick = () => {
+            
+            url = button.dataset.url;
+            id = button.dataset.product;
+            fetch(url + "?id=" + id);
+            }
+        });
+    }
+}
 

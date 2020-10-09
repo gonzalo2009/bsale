@@ -18,7 +18,7 @@ Home
             </div>
             <div class="price row">
                 <p class="column">${{ producto.variant.finalPrice}}</p>
-                <a class="btn btn-primary" href="{% url 'add' producto.id%}">Add</a>
+                <button class="btn btn-primary btn-add" data-url="{% url 'add' %}"  data-product="{{ producto.id }}">Add</button>
             </div>
         </div>
      {% endfor %}   
